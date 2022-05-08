@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="PaymentStyle.css" />
+    <title>Payment</title>
+  </head>
+  <body>
+    <form method="get">
+      <div class="container">
+        <div class="company-logo">
+          <img src="American-Express-logo.png" />
+        </div>
+        <div class="user-info">
+          <label for="email">Email : </label>
+          <input type="email" id="email" placeholder="Email" />
+          <label for="password">Password : </label>
+          <input type="password" id="password" placeholder="Password" />
+          <div class="checkbox">
+            <input type="checkbox" id="forgot-password" />
+            <label for="forgot-password">Forgot Password</label>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="login-button" type="submit">Login</button>
+          <button id="login-button" type="reset">Reset</button>
+        </div>
+        <footer>Copyright . 2001</footer>
+      </div>
+    </form>
+  </body>
+  <script>
+    let login = document.getElementById("login-button");
+    login.onclick = function () {
+      if (document.getElementById("email").value == "") {
+        alert("Please enter email address");
+      } else if (document.getElementById("password").value == "") {
+        alert("Please enter password");
+      } else {
+        alert("Login Successful");
+      }
+    };
+  </script>
+</html>
